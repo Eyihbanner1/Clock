@@ -1,0 +1,121 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.clock {
+    min-height: 100vh;
+    background: #018DED url(https://unsplash.it/1500/1000?image=881&blur=5);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .clock-face {
+        position: relative;
+        padding: 10px;
+        width: 250px;
+        height: 250px;
+        border: 6px solid rgb(37, 36, 36);
+        border-radius: 50%;
+        background: white;
+        .hands {
+            position: absolute;
+            top: 50%;
+            width: 40%;
+            left: 10%;
+            height: 6px;
+            background: black;
+            transform: rotate(90deg);
+            transform-origin: 100%;
+            transition: all 0.05s;
+            transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+            &:nth-child(3) {
+                position: absolute;
+                width: 30%;
+                left: 20%;
+                transform: rotate(90deg);
+            }
+            &:nth-child(1) {
+                height: 1px;
+                background: red
+            }
+            &:nth-child(2) {
+                height: 3px;
+            }
+        }
+        .dot {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: black;
+        }
+        .number {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+        }
+        .one {
+            top: 5%;
+            left: 71%;
+        }
+        .two {
+            top: 22%;
+            left: 89%;
+        }
+        .three {
+            top: 45%;
+            left: 95%;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        .four {
+            top: 69%;
+            left: 89%;
+        }
+        .five {
+            top: 86%;
+            left: 71%;
+        }
+        .six {
+            top: 90%;
+            left: 48%;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        .seven {
+            top: 87%;
+            left: 25%;
+        }
+        .eight {
+            top: 70%;
+            left: 7%;
+        }
+        .nine {
+            top: 45%;
+            left: 0%;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        .ten {
+            top: 22%;
+            left: 6%;
+        }
+        .eleven {
+            top: 5%;
+            left: 23%;
+        }
+        .twelve {
+            top: 0%;
+            left: 45%;
+            font-size: 20px;
+            font-weight: 700;
+        }
+    }
+}
